@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Remote Desktop Highlighter",
+  "version": "1.0",
+  "description": "Detects when the user lands on remotedesktop.google.com and changes the background color of the specified div.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://remotedesktop.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://remotedesktop.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
