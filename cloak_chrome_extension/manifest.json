@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Cloak Extension",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://catcourses.ucmerced.edu/*"],
+      "js": ["cloak.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
